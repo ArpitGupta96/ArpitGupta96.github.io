@@ -562,20 +562,40 @@ nav a:hover::after {
 @media(max-width:768px) {
     nav {
         padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background: rgba(10, 10, 26, 0.95);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(0, 247, 255, 0.2);
     }
 
     nav h2 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        margin-bottom: 0;
+    }
+
+    nav div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
     }
 
     nav a {
-        margin-left: 15px;
+        margin-left: 0;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+        background: rgba(0, 247, 255, 0.1);
+        color: #00f7ff;
     }
 
     .hero {
-        padding: 100px 20px 80px;
+        padding: 120px 20px 80px;
     }
 
     .hero h1 {
@@ -611,10 +631,62 @@ nav a:hover::after {
 
     .about-stats {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-card {
+        padding: 20px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skill-category {
+        padding: 20px;
+    }
+
+    .timeline-item {
+        padding: 20px 25px;
+    }
+
+    .timeline-item h4 {
+        font-size: 1rem;
+    }
+
+    .contact-card {
+        padding: 40px 20px;
     }
 
     .contact-links {
         flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-link {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    .btn-secondary {
+        margin-left: 0;
+        margin-top: 10px;
     }
 }
 </style>
